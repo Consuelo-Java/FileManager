@@ -4,11 +4,13 @@ public class Documento implements Serializable {
     String titolo;
     String autore;
     String contenuto;
+    int numeroPagine;
 
-    public Documento(String titolo, String autore, String contenuto) {
+    public Documento(String titolo, String autore, String contenuto, int numeroPagine) {
         this.titolo = titolo;
         this.autore = autore;
         this.contenuto = contenuto;
+        this.numeroPagine = numeroPagine;
     }
 
     public void salvaSuFile(String nomeFile){
