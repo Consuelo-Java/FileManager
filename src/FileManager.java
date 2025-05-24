@@ -61,4 +61,23 @@ public class FileManager {
             System.out.println("Impossibile eliminare il file " + nomeFile);
         }
     }
+
+    /**
+     * @deprecated Metodo obsoleto. Si consiglia l'uso del metodo leggiDaFile
+     */
+    @Deprecated
+    public static void stampaFile(String nomeFile){
+        File file = new File(nomeFile);
+        try {
+            BufferedReader input = new BufferedReader(new FileReader(file));
+            String linea = input.readLine();
+            while (linea != null) {
+                System.out.println(linea);
+                linea = input.readLine();
+            }
+        } catch (IOException e){
+            System.err.println("Impossibile leggere il file "+nomeFile);
+        }
+
+    }
 }

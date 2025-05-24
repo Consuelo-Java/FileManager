@@ -25,6 +25,7 @@ public class Documento implements Serializable {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public static Documento caricaDaFile(String nomeFile){
         File file = new File(nomeFile);
         try {
